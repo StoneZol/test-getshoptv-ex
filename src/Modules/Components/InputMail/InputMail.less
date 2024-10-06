@@ -1,0 +1,46 @@
+.InputMail {
+    width: 560px;
+    height: 48px;
+    input {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid @Gray01;
+        &::placeholder {
+            color: @Black;
+        }
+        &:focus {
+            border-bottom: 1px solid @Black;
+        }
+    }
+    span{
+        display: none;
+        color: @Error;
+        margin-top: 2px;
+     } 
+
+    .error {
+        border-bottom: 1px solid @Error;
+    }
+
+    input.error + span {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+.InputMail {
+    width: 688px;
+}
+
+}
+
+@media screen and (max-width: 412px) {
+.InputMail {
+    width: 288px;
+    height: 40px;
+}
+}

@@ -1,0 +1,21 @@
+.button-orange{
+    box-sizing: border-box;
+    width: 210px;
+    border-radius: 12px;
+    padding: 12px 20px;
+    background-color: @Orange;
+    color: @White;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+
+    &:active{
+        background-color: @DarkOrange;
+    }
+}
+
+.disabled{
+    background-color: @Gray02;
+    pointer-events: none;
+    color: @Gray01;
+}

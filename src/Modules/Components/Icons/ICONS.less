@@ -1,0 +1,56 @@
+.Close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.UPs {
+    box-sizing: border-box;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    height: 24px;
+    width: 77px;
+    color: @Gray01;
+    transition: color 0.3s ease, border-color 0.3s ease; // Плавный переход для основного текста
+    display: flex;
+    align-items: end;
+    
+    span {
+        margin-bottom: 3px;
+        color: @Gray01;
+        transition: color 0.3s ease; // Плавный переход для цвета span
+    }
+
+    svg {
+        transition: transform 0.3s ease; // Плавный переход для анимации svg
+    }
+
+    &:hover {
+        color: @Orange;
+        border-bottom: 1px solid @Orange;
+
+        span {
+            color: @Orange;
+        }
+
+        svg {
+            transform: rotate(-45deg); // Обратите внимание, что используем transform для плавного вращения
+        }
+    }
+}
+
+.CheckBox{
+    user-select: none;
+    cursor: pointer;
+}
+
+

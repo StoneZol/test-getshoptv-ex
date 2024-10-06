@@ -1,0 +1,37 @@
+.FormBack{
+    width: 560px;
+    height: 216px;
+    background-color: @Gray02;
+
+    .FormInput {
+        width: 100%;
+        height: 100%;
+        border: 1px solid @Gray01;
+        resize: none;
+        outline: none;
+        border-radius: 12px;
+        padding: 12px;
+        background-color: @Gray02;
+        &::placeholder{
+            color: @Black;
+        }
+        &:focus{
+            border: 1px solid @Black;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .FormBack{
+        width: 688px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .FormBack{
+        width: 288px;
+        height: 223px;
+    }
+}

@@ -1,0 +1,92 @@
+.font-template(@size, @weight, @lineHeight, @letterSpacing) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+    letter-spacing: @letterSpacing;
+}
+
+.body-text-1,
+.body-text-2,
+.body-text-3,
+.button,
+.h1,
+.h2,
+.h3 {
+    color: @Black;
+}
+
+.bold {
+    font-weight: 700;
+}
+.medium {
+    font-weight: 500;
+}
+.regular {
+    font-weight: 400;
+}
+
+.H1 {
+    .font-template(80px,700, 110%, -0.04em);
+}
+
+.H2 {
+    .font-template(32px, 700, 120%, normal);
+}
+.H3 {
+    .font-template(24px,700, 32px, normal);
+}
+.button {
+    .font-template(14px,500, 24px, 0.5px);
+}
+.body-text-1 {
+    .font-template(22px, 400, 32px, normal);
+}
+
+.body-text-2 {
+    .font-template(18px, 400, 22px, normal);
+}
+.body-text-3 {
+    .font-template(14px, 400, 20px, normal);
+}
+
+@media screen and (max-width: 768px) {
+    .H1 {
+        .font-template(52px, 700, 57.2px, normal);
+    }
+    .H2 {
+        .font-template(28px, 700, 33.6px, normal);
+    }
+    .H3 {
+        .font-template(16px,700, 20.4px, normal);
+    }
+    .button {
+        .font-template(14px, 500, 24px, 0.5px);
+    }
+    .body-text-1 {
+        .font-template(14px, 400, 20px, normal);
+    }
+    .body-text-2 {
+        .font-template(12px, 400, 16px, normal);
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .H1 {
+        .font-template(36px, 700, 39.6px, -0.04em);
+    }
+    .H2 {
+        .font-template(24px, 700, 30.6px, normal);
+    }
+    .H3 {
+        .font-template(20px, 700, 25.5px, normal);
+    }
+    .button {
+        .font-template(14px, 500, 14px, 0.5px);
+    }
+    .body-text-1 {
+        .font-template(16px, 400, 20.4px, normal);
+    }
+    .body-text-2 {
+        .font-template(14px, 400, 17.85px, normal);
+    }
+}

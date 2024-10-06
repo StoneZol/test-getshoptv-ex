@@ -1,0 +1,128 @@
+.ToggleButtonBox {
+    user-select: none;
+    cursor: pointer;
+    width: 560px;
+    height: 60px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 14px;
+    display: flex;
+    background-color: @Gray04;
+
+    .ToggleButton {
+        box-sizing: border-box;
+        width: 560px;
+        border-radius: 14px;
+        padding: 4px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .ToggleFrame {
+            box-sizing: border-box;
+            z-index: 11;
+            width: 276px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            transition: color 0.3s;
+        }
+
+        .active{
+            color: @White;
+        }
+
+        .noactive{
+            color:@Gray01;
+            transition: color 0.3s;
+            &:hover{
+                color: @Black;
+            }
+        }
+    }
+
+    .ToggleBackFrame {
+        padding: 4px;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: absolute;
+        transition: transform 0.3s ease-in;
+
+        .BackFrame {
+            background-color: @Black;
+            width: 50%;
+            height: 100%;
+            border-radius: 10px;
+            transition: 0.3s ease; /* Плавный переход цвета фона */
+        }
+    }
+
+    .left {
+        transform: translateX(0);
+    }
+
+    .right {
+        transform: translateX(100%);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .ToggleButtonBox {
+        width: 336px;
+        height: 36px;
+        border-radius: 8.4px;
+        padding: 2.4px;
+        .ToggleButton {
+            padding: 2.4px;
+            width: 336px;
+            border-radius: 8.4px;
+            gap: 2.4px;
+            .ToggleFrame {
+                border-radius: 6px;
+            }
+        }
+        .ToggleBackFrame {
+            border-radius: 8.4px;
+            .BackFrame {
+                border-radius: 6px;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 412px) {
+    .ToggleButtonBox {
+        width: 288px;
+        height: 31px;
+        border-radius: 7.24px;
+        padding: 0;
+        .ToggleButton {
+            box-sizing: border-box;
+            border-radius: 8.4px;
+            justify-content: space-between;
+            .ToggleFrame {
+                width: 142.79px;
+                border-radius: 6px;
+                font-size: 12px;
+            }
+        }
+        .ToggleBackFrame {
+            padding: 2px 0px;
+            border-radius: 7.24px;
+            .BackFrame {
+
+                border-radius: 6px;
+            }
+
+        }
+    }    
+}
+
