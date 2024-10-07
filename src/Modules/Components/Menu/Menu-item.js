@@ -1,11 +1,16 @@
-import React from 'react';
-
-const MenuItem = ({props={}}) => {
+const MenuItem = ({
+    props = {}
+}) => {
     return (
-        <>
-                <span className={'menu-item button'}>{props.name}</span>
-        </>
+        <span
+            className={`menu-item button ${props.active
+                ? 'activeSection'
+                : ''}`}
+            onClick={props.func}>
+            {props.name}
+        </span>
     );
 }
 
 export default MenuItem;
+

@@ -1,11 +1,12 @@
 import React from 'react';
 import ButtonBlack from '../../Components/Button_black/ButtonBlack';
 import {Bulit} from '../../Components/Icons/ICONS';
-import NoteBook from '../../../Image/NoteBook.png'
+import NoteBook from '../../../Image/NoteBook.png';
+import { scrollToBottom } from '../../doubleFunc';
 
 const Section5 = () => {
     return (
-        <div className='contentSection5'>
+        <div className='contentSection5' id='howItWorks'>
             <div className='Center'>
             <div className='Left'>
                 <div className='Text'>
@@ -20,8 +21,7 @@ const Section5 = () => {
                         <span>Ежемесячные автоматические отчёты для каждого правообладателя.</span>
                     </div>
                 </div>
-                <ButtonBlack props={{text: 'Заказать звонок'}}/>
-
+                <ButtonBlack props={{text: 'Заказать звонок',func: scrollToBottom, }}/>
             </div>
             </div>
             <img src={NoteBook} alt="" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonOrange from '../../Components/Button_orange/ButtonOrange';
+import { scrollToBottom } from '../../doubleFunc';
 
 const Section1 = () => {
     return (
@@ -13,7 +14,8 @@ const Section1 = () => {
                         удовлетворённости пользователей с платформой рекламной монетизации</span>
                     <ButtonOrange
                         props={{
-                            text: 'Заказать Звонок'
+                            text: 'Заказать Звонок',
+                            func: scrollToBottom,
                         }}/>
                 </div>
             </div>

@@ -53,14 +53,18 @@
     }
 
     .contentSection2 {
+        z-index: 3;
         padding-top: 180px;
         padding-bottom: 60px;
         width: 1220px;
+        height: 452px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        overflow: hidden;
         .Left{
             width: 460px;
+            
         }
 
         .Right{
@@ -68,6 +72,7 @@
             flex-direction: column;
             gap: 32px;
             .RightText{
+
                 width: 560px;
                 opacity: 1;
                 transition: opacity 0.5s ease-in-out;
@@ -164,7 +169,7 @@
 
         }
         img{
-            width: 721px;
+            width: auto;
             height: 482px;
             position: absolute;
             right: -30px;

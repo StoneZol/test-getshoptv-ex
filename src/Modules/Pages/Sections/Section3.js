@@ -3,7 +3,7 @@ import {Icon, IconLineLeft, IconLineRight, Bulit} from '../../Components/Icons/I
 
 const Section3 = () => {
     return (
-        <div className='contentSection3'>
+        <div className='contentSection3' id='advantages'>
               <h2 className={'H2 bold'}>Баланс между вырочкой и удовлетворённостью пользователей</h2>
             <div className='Main'>
                 <div className='Side'><Bulit/>
