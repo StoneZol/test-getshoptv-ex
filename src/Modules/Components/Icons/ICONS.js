@@ -104,7 +104,7 @@ export const Logo = () => {
 
 export const Close = ({props ={}}) => {
     return (
-        <div className='Close' onClick={props.func}>
+        <div className='Close' onClick={props.click}>
             <svg
                 width="44"
                 height="44"

@@ -3,6 +3,7 @@ import Header from '../Components/Header/Header';
 import ButtonOrange from '../Components/Button_orange/ButtonOrange';
 import ToggleButton from '../Components/Toggle_button/ToggleButton';
 import ToggleFrame from '../Vidgets/ToggleFrame';
+import Menu from '../Components/Menu/Menu';
 
 import Section1 from './Sections/Section1';
 import Section2 from './Sections/Section2';
@@ -15,19 +16,21 @@ import Back1 from '../../Image/Back1.png'
 
 const MainPage = () => {
     return (
-        <div className='MainPage'>
+        <div className='MainPageBox'>
             <div className='BG'>
-                <img src={Back1} alt="" />
-                <div  className='BGOver'></div>
+                <img src={Back1} alt=""/>
             </div>
-            
-                <Header/>
+            <div className={'BG-rect one'}></div>
+            <div className={'BG-rect two'}></div>
+            <div className='MainPage'>
+
                 <Section1/>
                 <Section2/>
                 <Section3/>
                 <Section4/>
                 <Section5/>
                 <Section6/>
+            </div>
         </div>
     );
 }

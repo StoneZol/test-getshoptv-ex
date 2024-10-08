@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Logo } from '../Icons/ICONS';
+import { Logo, Burger, Close } from '../Icons/ICONS';
 import MenuItem from '../Menu/Menu-item';
 import { scrollTo } from '../../doubleFunc';
+import Menu from '../Menu/Menu';
 
 const Header = ({ props = {} }) => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [hasScrolledDown, setHasScrolledDown] = useState(false);
 
+    const [showMenu, setShowMenu] = useState(true)
+
     const [activeSection, setActiveSection] = useState(null);
     const sections = ['advantages', 'howItWorks'];
+
+    const handlerShowMenu = () => {
+        setShowMenu(!showMenu)
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -85,6 +92,10 @@ const Header = ({ props = {} }) => {
                 <MenuItem props={{ name: 'Преимущества', active: activeSection === 'advantages', func: () => scrollTo('advantages')}} />
                 <MenuItem props={{ name: 'Как работаем', active: activeSection === 'howItWorks', func: () => scrollTo('howItWorks')}} />
                 </div>
+                <div className='Header-menu-alt'><Burger props={{click: handlerShowMenu}}/>
+                {!showMenu && <Menu activeSection={activeSection} scrollTo={scrollTo} closeUp={handlerShowMenu}/>}
+        </div>
+                
             </div>
         </header>
     );

@@ -1,10 +1,9 @@
 .Header {
     width: 100%;
     z-index: 999;
-    padding-top: 32px;
-    top:0;
-    position: fixed;
     background-color: @Gray03;
+    top: 0;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +16,11 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
+
+        .Header-menu-alt{
+            position: relative;
+            display: none;
+        }
 
         .Header-menu {
             width: 336px;
@@ -33,5 +37,26 @@
 }
 
 .scrolled {
-    box-shadow: 0px 5px 5px 0px #A4ADAC40; // Тень остается, если страница была прокручена вниз
+    box-shadow: 0px 5px 5px 0px #A4ADAC40;
+}
+
+
+
+@media screen and (max-width: 1220px) {
+    .Header{
+        padding-top: 5px;
+        .HeaderBox{
+            .Header-menu-alt{
+                display: block;
+            }
+            .Header-menu {
+                display: none;
+            }
+            
+        }
+    }
+    .scrolled {
+        box-shadow: 0px 5px 5px 0px #A4ADAC40; 
+        background-color: @Gray03;
+    }
 }
