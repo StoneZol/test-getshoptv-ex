@@ -12,13 +12,13 @@ const Section5 = () => {
                     <div className='Text'>
                         <span className={'H2 bold'}>Подробные отчёты для вас и правообладателей</span>
                         <div className='Punkts'>
-                            <div className='body-text-1'><Bulit/>
+                            <div className={'body-text-1 Punkt'}><Bulit/>
                                 <span>Выручка, CTR, показы и другие показатели в реальном времени.</span>
                             </div>
-                            <div className='body-text-1'><Bulit/>
+                            <div className={'body-text-1 Punkt'}><Bulit/>
                                 <span>Инструменты контроля качества трафика.</span>
                             </div>
-                            <div className='body-text-1'><Bulit/>
+                            <div className={'body-text-1 Punkt'}><Bulit/>
                                 <span>Ежемесячные автоматические отчёты для каждого правообладателя.</span>
                             </div>
 

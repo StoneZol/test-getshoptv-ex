@@ -1,13 +1,17 @@
 .MainPageBox{
     background-color: @Gray03;
+    margin: 0 10px;
     width: 100%;
+    min-width: 412px;
     height: 3392px;
+    overflow: hidden;
     .BG{
         z-index: 1;
         position: absolute;
         width: 100%;
         height: 801px;
         top:67px;
+        overflow: hidden;
 
         img{
         object-fit: cover;
@@ -41,23 +45,24 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     gap: 180px;
     overflow: hidden;
-    position: relative;
     .contentSection {
         z-index: 4;
         width: 100%; 
         margin-top: 200px;
         display: flex;
-        align-items: center;
-        justify-content: start;
         flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
 
         .Main {
             display: flex;
-            width: 1220px;
-            padding: 0 30px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1220px;
+            margin: 0 30px;
             .TextBtn {
                 width: 100%;
                 height: 440px;
@@ -80,6 +85,7 @@
     }
 
     .contentSection2 {
+        margin:  0 30px;
         z-index: 3;
         width: 100%;
         height: 212px;
@@ -88,7 +94,9 @@
         justify-content: center;
         align-items: center;
         .Main{
-            width: 1220px;
+            margin: 0 30px;
+            width: 100%;
+            max-width: 1160px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -101,9 +109,9 @@
             .Right{
                 display: flex;
                 flex-direction: column;
+                min-height: 188px;
                 gap: 32px;
                 .RightText{
-    
                     width: 560px;
                     opacity: 1;
                     transition: opacity 0.5s ease-in-out;
@@ -124,16 +132,18 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        gap: 80px;
         h2{
             text-align: center;
             width: 100%;
-            margin-bottom: 80px;
         }
         .Main{
-            width: 1160px;
+            width: 100%;
+            max-width: 1160px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             .Side{
+                box-sizing: border-box;
                 width: 300px;
                 display: flex;
                 flex-direction: column;
@@ -158,7 +168,9 @@
         align-items: center;
         justify-content: center;
         .Main{
-            width: 1220px;
+            margin: 0 30px;
+            width: 100%;
+            max-width: 1220px;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -170,7 +182,7 @@
                 height: 70.78px;
                 width: 632.51px;
                 img{
-                    width: auto;
+                    height: 100%;
                     &:hover{
                         cursor: pointer;
                     }
@@ -185,8 +197,12 @@
         height: 519px;
         display: flex;
         justify-content: center;
+        overflow: hidden;
+        position: relative;
         .Main{
-            width: 1220px;
+            margin:  0 30px;
+            width: 100%;
+            max-width: 1220px;
             display: flex;
             position: relative;
             align-items: center;
@@ -202,11 +218,14 @@
                     flex-direction: column;
                     span{
                         width: 473px;
-                        height: 76px;
                     }
                     .Punkts{
-                        div{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .Punkt{
                             display: flex;
+                            width: 100%;
                             gap: 20px;
                         }
                     }
@@ -224,12 +243,15 @@
     }
 
     .contentSection6{
-        width: 1220px;
+        z-index: 3;
+        width: 100%;
         height: 333px;
         display:flex;
         justify-content: center;
         .Section{
-            width: 1160px;
+            margin:  0 30px;
+            width: 100%;
+            max-width: 1160px;
             display: flex;
             flex-direction: column;
             gap: 64px;
@@ -275,11 +297,12 @@
 
 
 @media screen and (max-width: 1220px) {
-    .MainPage {
+    .MainPageBox{
+        height: 2541px;
+
         .BG {
             height: 810.44px;
             top: -112.72px;
-            gap: 0;
             top: 0;
             img {
                 width: 1460px;
@@ -287,32 +310,156 @@
 
             }
         }
-        .contentSection {
-            padding-top: 80px;
-            .Main {
-                width: 688px;
-                .Text2 {
-                    width: 393px;
-                }
-                .button {
-                    width: 100%;
-                }
-            }
+        .BG-rect{
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            background-color: @Gray04;
+            width: 100%;
+            height: 471px;
+        }
+        .one{
+            top: 771px;
+        }
+        .two{
+            top: 1421px;
         }
 
-        .contentSection2{
-            padding-top: 120px;  
-            padding-bottom: 30px;
-            height: 128px;
-            .Main{
-                width: 688px;
-                .Left {
-                    width: 275px;
+        .MainPage {
+            height: 2474px;
+            gap: 120px;
+            .contentSection {
+                margin-top: 157px;
+                .Main {
+                    .TextBtn{
+                        max-width: 688px;
+                        height: 314px;
+                        gap: 60px;
+                        .Text{
+                            .Text2{
+                                width: 393px;
+                            }
+                        }
+                        .button{
+                            width: 100%;
+                        }
+                    }
                 }
-                .Right {
-                    width: 334px;
-                    .RightText{
+            }
+            .contentSection2{
+                height: 128px;
+                .Main{
+                    height: 100%;
+                    width: 688px;
+                    .Left {
+                        width: 275px;
+                        height: 136px;
+                    }
+                    .Right {
                         width: 334px;
+                        gap: 16px;
+                        .RightText{
+                            width: 334px;
+                        }
+                    }
+                }
+            }
+
+            .contentSection3{
+                height: 317px;
+                width: 688px;
+                gap: 60px;
+                h2{
+                    width: 512px;
+                    height: 68px;
+                }
+                .Main{
+                    width: 688px;
+                    .Side{
+                        width: 216px;
+                        height: 189px;
+                        padding: 24px;
+                        .H3{
+                            width: 153px;
+                        }
+
+                    }
+                    .Center{
+                    }
+                }
+            }
+
+            .contentSection4{
+                height: 60px;
+                .Main{
+                    width: 688px;
+                    .Left{
+                        width: 150px;
+                    }
+                    .Partners{
+                        width: 433.51px;
+                        height: 48.51px;
+                    }
+                }
+
+            }
+
+            .contentSection5{
+                height: 353px;
+                .Main{
+                    width: 688px;
+                    .Left{
+                        gap: 32px;
+                        .Text{
+                            gap: 32px;
+                            span{
+                                width: 260px;
+                            }
+                            .Punkts{
+                                height: 139px;
+                                .Punkt{
+                                    gap: 16px;
+                                    width: 334px;
+                                    svg{
+                                        width: 24px;
+                                        height: 24px;
+                                    }
+                                    span{
+                                        width: 100%;
+                                    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                img{
+                    height: 266px;
+                }
+            }
+            .contentSection6{
+                height: 550px;
+                .Section{
+                    gap: 32px;
+                    width: 100%;
+                    max-width: 688px;
+                    .BackFormVidget{
+                        flex-direction: column;
+                        .Left{
+                            width: 100%;
+                        }
+                        .Right{
+                            width: 100%;
+                            .PDN{
+                                width: 100%;
+                                span{
+                                    width: 100%;
+                                }
+                            }
+                            .button{
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }

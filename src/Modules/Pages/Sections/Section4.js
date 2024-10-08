@@ -9,9 +9,9 @@ const Section4 = () => {
                 <div className='Main'>
                 <span className={'Left H3'}>Наши партнеры по монетизации</span>
                 <div className='Partners'>
-                    <img src={Partner1} style={{height: '54.33px'}}alt="" />
-                    <img src={Partner2} style={{height: '70.78px'}}alt="" />
-                    <img src={Partner3} style={{height: '60.52px'}}alt="" />
+                    <img src={Partner1}alt="" />
+                    <img src={Partner2}alt="" />
+                    <img src={Partner3}alt="" />
                 </div>
                 </div>
             </div>

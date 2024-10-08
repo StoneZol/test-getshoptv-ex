@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
 
 export const Icon = () => {
@@ -45,23 +45,136 @@ return(
     </div>)
 }
 
-export const IconLineLeft = () =>{
-    return(
-<svg width="227" height="12" viewBox="0 0 227 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.218805 6C0.218805 9.19287 2.80713 11.7812 6 11.7812C9.19287 11.7812 11.7812 9.19287 11.7812 6C11.7812 2.80713 9.19287 0.218805 6 0.218805C2.80713 0.218805 0.218805 2.80713 0.218805 6ZM6 7.08397H227V4.91603H6V7.08397Z" fill="#FF5900"/>
-</svg>
+export const IconLineLeft = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    )
-}
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
 
-export const IconLineRight = () =>{
-    return(
-        <svg width="230" height="12" viewBox="0 0 230 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M218.219 6.00002C218.219 9.19289 220.807 11.7812 224 11.7812C227.193 11.7812 229.781 9.19289 229.781 6.00002C229.781 2.80715 227.193 0.218825 224 0.218824C220.807 0.218824 218.219 2.80715 218.219 6.00002ZM-9.4764e-08 7.08397L224 7.08399L224 4.91605L9.4764e-08 4.91603L-9.4764e-08 7.08397Z" fill="#FF5900"/>
-</svg>
+        return() => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
-    )
-}
+    const renderSvg = () => {
+        if (windowWidth > 1220) {
+            return (
+                <svg
+                    width="227"
+                    height="12"
+                    viewBox="0 0 227 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.218805 6C0.218805 9.19287 2.80713 11.7812 6 11.7812C9.19287 11.7812 11.7812 9.19287 11.7812 6C11.7812 2.80713 9.19287 0.218805 6 0.218805C2.80713 0.218805 0.218805 2.80713 0.218805 6ZM6 7.08397H227V4.91603H6V7.08397Z"
+                        fill="#FF5900"/>
+                </svg>
+
+            );
+        }
+        if (windowWidth <= 1220 && windowWidth > 412) {
+            return (
+                <svg
+                    width="96"
+                    height="12"
+                    viewBox="0 0 96 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.666667 6C0.666666 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666666 0.666667 3.05448 0.666667 6ZM6 7L96 7.00001L96 5.00001L6 5L6 7Z"
+                        fill="#FF5900"/>
+                </svg>
+
+            );
+        }
+        if (windowWidth <= 412) {
+            return (
+                <svg
+                    width="12"
+                    height="59"
+                    viewBox="0 0 12 59"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6 0.666667C3.05448 0.666667 0.666666 3.05448 0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666666 6 0.666667ZM5 6L5 59L7 59L7 6L5 6Z"
+                        fill="#FF5900"/>
+                </svg>
+
+            )
+        }
+    };
+
+    return <> {
+        renderSvg()
+    }</>;
+};
+
+export const IconLineRight = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+
+        return() => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const renderSvg = () => {
+        if (windowWidth > 1220) {
+            return (
+                <svg
+                    className='Line'
+                    width="230"
+                    height="12"
+                    viewBox="0 0 230 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M218.219 6.00002C218.219 9.19289 220.807 11.7812 224 11.7812C227.193 11.7812 229.781 9.19289 229.781 6.00002C229.781 2.80715 227.193 0.218825 224 0.218824C220.807 0.218824 218.219 2.80715 218.219 6.00002ZM-9.4764e-08 7.08397L224 7.08399L224 4.91605L9.4764e-08 4.91603L-9.4764e-08 7.08397Z"
+                        fill="#FF5900"/>
+                </svg>
+            );
+        }
+        if (windowWidth <= 1220 && windowWidth > 412) {
+            return (
+                <svg
+                    width="96"
+                    height="12"
+                    viewBox="0 0 96 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M95.3333 6C95.3333 3.05448 92.9455 0.666667 90 0.666667C87.0545 0.666666 84.6667 3.05448 84.6667 6C84.6667 8.94552 87.0545 11.3333 90 11.3333C92.9455 11.3333 95.3333 8.94552 95.3333 6ZM90 5L8.74228e-08 4.99999L-8.74228e-08 6.99999L90 7L90 5Z"
+                        fill="#FF5900"/>
+                </svg>
+
+            );
+        }
+        if (windowWidth <= 412) {
+            return (
+                <svg
+                    width="12"
+                    height="59"
+                    viewBox="0 0 12 59"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6 47.6667C3.05448 47.6667 0.666669 50.0545 0.666669 53C0.666669 55.9455 3.05448 58.3333 6 58.3333C8.94552 58.3333 11.3333 55.9455 11.3333 53C11.3333 50.0545 8.94552 47.6667 6 47.6667ZM5 4.37114e-08L5 53L7 53L7 -4.37114e-08L5 4.37114e-08Z"
+                        fill="#FF5900"/>
+                </svg>
+
+            )
+        }
+    };
+
+    return <> {
+        renderSvg()
+    }</>;
+};
 
 
 export const Bulit = () => {
