@@ -1,7 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
 import ButtonBlack from '../../Components/Button_black/ButtonBlack';
 import {Bulit} from '../../Components/Icons/ICONS';
-import NoteBook from '../../../Image/NoteBook.png';
+import NoteBook from '/public/Image/NoteBook.png';
 import {scrollToBottom} from '../../doubleFunc';
 
 const Section5 = () => {
@@ -31,7 +32,7 @@ const Section5 = () => {
                         }}/>
                 </div>
             </div>
-            <img src={NoteBook} alt=""/>
+            <Image src={NoteBook} alt=""/>
         </div>
     );
 }

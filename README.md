@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Проект на Next.js с использованием Less
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Данный проект был создан с использованием [Next.js](https://nextjs.org/) и [Less](https://lesscss.org/).
 
-## Available Scripts
+## Описание
 
-In the project directory, you can run:
+В этом проекте реализован макет, основанный на дизайне, представленном в Figma: [Ссылка на макет](https://www.figma.com/design/d59lCwSJpNunm55Jekcuw8/HR-Frontend?node-id=1-1631&node-type=frame&t=p6q9HwwxIUxUbUms-0).
 
-### `npm start`
+### Задание
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Функциональные требования:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- В шапке страницы находятся несколько ссылок, ведущих на различные секции этой страницы. При прокручивании страницы подсвечивается раздел, который сейчас в поле зрения пользователя. Если в поле зрения одновременно несколько разделов, подсвечивается ссылка на самый верхний из них.
+- В форме обратной связи реализована валидация email. Отправка формы ничего не делает.
+- Вёрстка адаптивная, как в макете.
 
-### `npm test`
+#### Нефункциональные требования:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Использовать Next.js в качестве сборщика статики (SSG).
+- В `dependencies` файла `package.json` (production зависимости) нельзя использовать пакеты, не направленные на стилизацию.
 
-### `npm run build`
+## Установка
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Чтобы запустить проект на локальном сервере, выполните следующие шаги:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Клонируйте репозиторий:
+    ```bash
+    git clone https://github.com/ваш-логин/ваш-репозиторий.git
+    cd ваш-репозиторий
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Установите зависимости:
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+3. Запустите проект в режиме разработки:
+    ```bash
+    npm run dev
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Деплой
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Проект развернут на [Vercel](https://test-getshoptv-ex.vercel.app/).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Ссылки
 
-## Learn More
+- [Ссылка на GitHub](https://github.com/StoneZol/test-getshoptv-ex)
+- [Деплой на Vercel](https://test-getshoptv-ex.vercel.app/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Используемые технологии
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Less](https://lesscss.org/)
 
-### Code Splitting
+## Лицензия
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Этот проект лицензирован на условиях [MIT License](LICENSE).
