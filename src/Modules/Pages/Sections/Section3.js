@@ -7,9 +7,8 @@ const Section3 = () => {
               <h2 className={'H2 bold'}>Баланс между вырочкой и удовлетворённостью пользователей</h2>
             <div className='Main'>
                 <div className='Side'><Bulit/>
-                    <span className={'H3 bold'}>Частотность
-                        <br/>под контролем</span>
-                    <span className={'body-text-2'}>Чтобы не ронять NPS <br/> и не увеличивать отток пользователей</span>
+                    <span className={'H3 bold'}>Частотность под контролем</span>
+                    <span className={'body-text-2'}>Чтобы не ронять NPS  и не увеличивать отток пользователей</span>
                 </div>
                 <div className='Center'>
                     <IconLineLeft/>
@@ -17,8 +16,7 @@ const Section3 = () => {
                     <IconLineRight/>
                 </div>
                 <div className='Side'><Bulit/>
-                    <span className={'H3 bold'}>Максимальная
-                        <br/>выручка</span>
+                    <span className={'H3 bold'}>Максимальная выручка</span>
                     <span className={'body-text-2'}>За счёт заполенения всех рекламных мест по высокой цене</span>
                 </div>
             </div>

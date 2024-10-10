@@ -1,8 +1,9 @@
 .Header {
     width: 100%;
     z-index: 999;
-    background-color: @Gray03;
+    background-color: transparent;
     top: 0;
+    left: 0;
     position: fixed;
     display: flex;
     align-items: center;
@@ -38,6 +39,7 @@
 }
 
 .scrolled {
+    background-color: @Gray03;
     box-shadow: 0px 5px 5px 0px #A4ADAC40;
 }
 
@@ -60,4 +62,10 @@
         box-shadow: 0px 5px 5px 0px #A4ADAC40; 
         background-color: @Gray03;
     }
+}
+
+@media screen and (max-width: 515px) {
+    .Header{
+        height: 65px;
+        }
 }

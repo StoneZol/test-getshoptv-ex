@@ -60,7 +60,8 @@
 
 
 .Icon{
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
     height: 120px;
     background-color: @Orange;
     border-radius: 17.97px;
@@ -71,4 +72,28 @@
 
 .Burger{
     margin: 6px 20px 0 0;
+}
+
+@media screen and (max-width: 1220px) {
+    .Icon{
+        width: 80px;
+        height: 80px;
+        svg{
+            width: 53px;
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .Logo{
+        width: 113px;
+        height: 28.07px;
+    }
+    .Burger{
+        margin: 0 15px 0 0;
+        svg{
+            width: 32px;
+        }
+    }
 }

@@ -1,15 +1,16 @@
 import React from 'react';
 import MenuItem from './Menu-item';
 import {Close, Logo} from '../Icons/ICONS';
-import {click} from '@testing-library/user-event/dist/click';
 
 const Menu = ({
     activeSection = {},
     scrollTo = {},
     closeUp = {},
+    visible ={},
 }) => {
     return (
-        <div className={`MenuBox`}>
+        <div className={`MenuBox  ${visible? 'active': ''}`}>
+            <div className='ShadowClose' onClick={closeUp}></div>
             <div className='Menu'>
                 <div className='MenuItemBox'>
                     <MenuItem

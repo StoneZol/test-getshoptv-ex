@@ -6,14 +6,24 @@
     opacity: 1;
     width: 100vw;
     height: 100vh;
-
+    transition: 0.3s;
+    transform: translateX(100%);
+    .ShadowClose{
+        position: fixed;
+        top:0;
+        right:0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 101
+    }
     .Menu{
-        z-index: 101;
+        z-index: 102;
         opacity: 1;
         position: fixed;
         top: 0;
         right: 0;
-        width: 283px;
+        width: 100%;
+        max-width: 283px;
         height: 100%;
         background-color: @White;
         box-sizing: border-box;
@@ -47,31 +57,40 @@
     }
 }
 
+.active{
+    transform: translateX(0);
+}
 
 
-@media screen and (max-width: 412px) {
+
+@media screen and (max-width: 515px) {
+.MenuBox{
     .Menu{
         padding: 0;
-        width: 320px;
-        height: 568px;
+        max-width: 515px;
+        height: 100vh;
         flex-direction: column-reverse;
         justify-content: start;
-        gap: 180px;
+        gap: 33%;
+        .MenuItemBox{
+            padding-left: 30px;
+        }
         .CloseBox{
             width: 100%;
             height: 65px;
-            padding: 0px 20px 0 20px;
+            padding: 0;
             justify-content: space-between;
             align-items: center;
             align-content: center;
             .Close {
-                
+                margin: 0 15px 0 0;
                 svg{
                     width: 32px;
                     height: 32px;
                 }
             }
             .Logo{
+                margin-top: 1px;
                 height: 25px;
                 display: block;
                 svg{
@@ -81,5 +100,6 @@
             }
         }
     }
+}
 
 }

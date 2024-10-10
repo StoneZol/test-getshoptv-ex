@@ -73,7 +73,7 @@ export const IconLineLeft = () => {
 
             );
         }
-        if (windowWidth <= 1220 && windowWidth > 412) {
+        if (windowWidth <= 1220 && windowWidth > 515) {
             return (
                 <svg
                     width="96"
@@ -88,7 +88,7 @@ export const IconLineLeft = () => {
 
             );
         }
-        if (windowWidth <= 412) {
+        if (windowWidth <= 515) {
             return (
                 <svg
                     width="12"
@@ -139,7 +139,7 @@ export const IconLineRight = () => {
                 </svg>
             );
         }
-        if (windowWidth <= 1220 && windowWidth > 412) {
+        if (windowWidth <= 1220 && windowWidth > 515) {
             return (
                 <svg
                     width="96"
@@ -154,7 +154,7 @@ export const IconLineRight = () => {
 
             );
         }
-        if (windowWidth <= 412) {
+        if (windowWidth <= 515) {
             return (
                 <svg
                     width="12"

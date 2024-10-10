@@ -8,7 +8,7 @@ const Header = ({ props = {} }) => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [hasScrolledDown, setHasScrolledDown] = useState(false);
 
-    const [showMenu, setShowMenu] = useState(true)
+    const [showMenu, setShowMenu] = useState(false)
 
     const [activeSection, setActiveSection] = useState(null);
     const sections = ['advantages', 'howItWorks'];
@@ -18,10 +18,21 @@ const Header = ({ props = {} }) => {
     }
 
     useEffect(() => {
+        if (showMenu) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [showMenu]);
+
+    useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > 100) {
+            if (currentScrollY > 10) {
                 setHasScrolledDown(true);
             } else {
                 setHasScrolledDown(false); 
@@ -59,20 +70,16 @@ const Header = ({ props = {} }) => {
                     }
                 }
             });
-    
-            // Проверяем, если текущая секция видима более чем на 50%
             if (currentSection) {
                 const currentSectionElement = document.getElementById(currentSection);
                 const rect = currentSectionElement.getBoundingClientRect();
-                const isMoreThan50Visible = rect.height / 2 <= window.innerHeight - rect.top; // Проверяем видимость
-    
-                // Если элемент виден менее чем на 50%, сбрасываем активную секцию
+                const isMoreThan50Visible = rect.height / 2 <= window.innerHeight - rect.top;
                 if (!isMoreThan50Visible) {
                     currentSection = null;
                 }
             }
     
-            setActiveSection(currentSection); // Устанавливаем активную секцию
+            setActiveSection(currentSection);
         };
     
         window.addEventListener('scroll', handleSectionScroll);
@@ -93,9 +100,9 @@ const Header = ({ props = {} }) => {
                 <MenuItem props={{ name: 'Как работаем', active: activeSection === 'howItWorks', func: () => scrollTo('howItWorks')}} />
                 </div>
                 <div className='Header-menu-alt'><Burger props={{click: handlerShowMenu}}/>
-                {!showMenu && <Menu activeSection={activeSection} scrollTo={scrollTo} closeUp={handlerShowMenu}/>}
-        </div>
-                
+                {/* {!showMenu && <Menu activeSection={activeSection} scrollTo={scrollTo} closeUp={handlerShowMenu}/>} */}
+                <Menu activeSection={activeSection} scrollTo={scrollTo} closeUp={handlerShowMenu} visible={showMenu}/>
+                </div>  
             </div>
         </header>
     );

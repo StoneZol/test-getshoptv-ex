@@ -19,4 +19,8 @@
   }
   #root{
     width: 100%;
+    overflow: hidden;
+  }
+  .App{
+    overflow: hidden;
   }
