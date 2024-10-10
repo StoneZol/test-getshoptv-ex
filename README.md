@@ -25,8 +25,8 @@
 
 1. Клонируйте репозиторий:
     ```bash
-    git clone https://github.com/ваш-логин/ваш-репозиторий.git
-    cd ваш-репозиторий
+    git clone (https://github.com/StoneZol/test-getshoptv-ex)
+    cd test-getshoptv-ex
     ```
 
 2. Установите зависимости:
