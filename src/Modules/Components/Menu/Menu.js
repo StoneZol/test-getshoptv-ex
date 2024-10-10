@@ -17,13 +17,19 @@ const Menu = ({
                         props={{
                             name: 'Преимущества',
                             active: activeSection === 'advantages',
-                            func: () => scrollTo('advantages')
+                            func: () => {
+                                scrollTo('advantages')
+                                closeUp()
+                        }
                         }}/>
                     <MenuItem
                         props={{
                             name: 'Как работаем',
                             active: activeSection === 'howItWorks',
-                            func: () => scrollTo('howItWorks')
+                            func: () => {
+                                scrollTo('howItWorks')
+                                closeUp()
+                        }
                         }}/>
                 </div>
                 <div className='CloseBox'>

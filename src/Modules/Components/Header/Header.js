@@ -96,8 +96,10 @@ const Header = ({ props = {} }) => {
             <div className='HeaderBox'>
                 <Logo />
                 <div className='Header-menu'>
-                <MenuItem props={{ name: 'Преимущества', active: activeSection === 'advantages', func: () => scrollTo('advantages')}} />
-                <MenuItem props={{ name: 'Как работаем', active: activeSection === 'howItWorks', func: () => scrollTo('howItWorks')}} />
+                <MenuItem props={{ name: 'Преимущества', active: activeSection === 'advantages', 
+                func: () => {scrollTo('advantages');}}} />
+                <MenuItem props={{ name: 'Как работаем', active: activeSection === 'howItWorks', 
+                func: () => {scrollTo('howItWorks');}}} />
                 </div>
                 <div className='Header-menu-alt'><Burger props={{click: handlerShowMenu}}/>
                 {/* {!showMenu && <Menu activeSection={activeSection} scrollTo={scrollTo} closeUp={handlerShowMenu}/>} */}
