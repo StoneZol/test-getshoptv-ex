@@ -46,16 +46,20 @@ return(
 }
 
 export const IconLineLeft = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(0);
 
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-
-        return() => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+        useEffect(() => {
+            // Проверяем, есть ли доступ к window
+            if (typeof window !== "undefined") {
+                setWindowWidth(window.innerWidth);
+                const handleResize = () => setWindowWidth(window.innerWidth);
+                window.addEventListener('resize', handleResize);
+    
+                return () => {
+                    window.removeEventListener('resize', handleResize);
+                };
+            }
+        }, []);
 
     const renderSvg = () => {
         if (windowWidth > 1220) {
@@ -111,15 +115,18 @@ export const IconLineLeft = () => {
 };
 
 export const IconLineRight = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(0);
 
     useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
+        if (typeof window !== "undefined") {
+            setWindowWidth(window.innerWidth);
+            const handleResize = () => setWindowWidth(window.innerWidth);
+            window.addEventListener('resize', handleResize);
 
-        return() => {
-            window.removeEventListener('resize', handleResize);
-        };
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }
     }, []);
 
     const renderSvg = () => {

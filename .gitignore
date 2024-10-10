@@ -9,7 +9,12 @@
 /coverage
 
 # production
-/build
+/.next
+/out
+
+# build artifacts
+dist/
+build/
 
 # misc
 .DS_Store
